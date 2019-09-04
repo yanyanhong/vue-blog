@@ -1,28 +1,48 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+      <keep-alive include="news-list">
+          <router-view></router-view>
+      </keep-alive>
   </div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+// import NewsList from './components/NewsList'
 export default {
   name: 'app',
-  components: {
-    HelloWorld
+  data:()=>({
+
+  }),
+  computed:{
+    
+  },
+  created(){
+    
+  },
+  mounted(){
+    
+  },
+  methods:{
+    
+  },
+  components:{
+    // 'news-list':NewsList
   }
+
 }
 </script>
 
 <style>
+html{
+  font-size:calc(100vw/7.5)
+}
+html,body{
+  margin: 0;
+  padding: 0;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
